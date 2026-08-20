@@ -13,15 +13,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate HTML
-        uses: Cyb3r-Jak3/html5validator-action@v1.0.0
-        with:
-          root: .
-
       - name: Check broken links
         uses: lycheeverse/lychee-action@v1.10.0
         with:
           args: --verbose .
+
+      - name: Validate HTML with W3C
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/workspace \
+            ghcr.io/validator/validator:latest \
+            --verbose \
+            /workspace/*.html
 
   deploy:
     needs: validate
