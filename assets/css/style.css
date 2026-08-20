@@ -42,7 +42,6 @@ body {
 .hero {
   background: var(--cinza-tecnico);
   padding: 60px 24px;
-  text-align: left;
   border-bottom: 1px solid var(--verde-xyron);
 }
 
