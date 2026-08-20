@@ -18,13 +18,13 @@ jobs:
         with:
           args: --verbose .
 
-      - name: Validate HTML with W3C
-        run: |
-          docker run --rm \
-            -v ${{ github.workspace }}:/workspace \
-            ghcr.io/validator/validator:latest \
-            --verbose \
-            /workspace/*.html
+      - name: Validate HTML with HTMLHint
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: |
+          npm install -g htmlhint
+          htmlhint "**/*.html"
 
   deploy:
     needs: validate
