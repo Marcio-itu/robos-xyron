@@ -1,41 +1,29 @@
 User-agent: *
 Allow: /
 
-# IA crawlers - explicitly allowed for IA First
-User-agent: GPTBot
-Allow: /
+Sitemap: https://robos-xyron.com.br/sitemap.xml
+Host: https://robos-xyron.com.br
 
-User-agent: ChatGPT-User
+User-agent: GPTBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
-
-User-agent: Meta-ExternalAgent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Applebot-Extended
-Allow: /
-
-Sitemap: https://marcio-itu.github.io/robos-xyron/sitemap.xml
